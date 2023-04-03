@@ -1,8 +1,11 @@
+// photos
 const photos = ["img/nature.jpg", "img/flower.jpg", "img/moon.jpg"];
 
-let imgTag = document.querySelector("img");
+// finging element
+const imgTag = document.getElementsByTagName("img")[0];
 
 let count = 0;
+// click handler
 const prev = () => {
   count--;
   if (count < 0) {
@@ -12,6 +15,7 @@ const prev = () => {
     imgTag.src = photos[count];
   }
 };
+
 const next = () => {
   count++;
   if (count == photos.length) {
